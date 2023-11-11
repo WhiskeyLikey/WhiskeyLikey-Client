@@ -13,7 +13,8 @@ import mag3 from './assets/mag3.png';
 import likelion from './assets/likelion.svg';
 import returnIc from './assets/return.svg';
 import { Logo } from './Start';
-import domtoimage from 'dom-to-image';
+// import domtoimage from 'dom-to-image';
+import html2canvas from 'html2canvas';
 import { saveAs } from 'file-saver';
 import { useLocation, Link } from 'react-router-dom';
 
@@ -27,12 +28,12 @@ const Result = () => {
 
   // 이미지 저장
   const cardRef = useRef();
-  const onImgDownload = () => {
-    const card = cardRef.current;
-    domtoimage
-      .toBlob(card)
-      .then((blob) => saveAs(blob, 'WhiskeyLikeyForYou.png'));
-  };
+  // const onImgDownload = () => {
+  //   const card = cardRef.current;
+  //   domtoimage
+  //     .toBlob(card)
+  //     .then((blob) => saveAs(blob, 'WhiskeyLikeyForYou.png'));
+  // };
 
   // // 링크 복사
   // const baseUrl = ''; //서버url
@@ -104,8 +105,21 @@ const Result = () => {
     }
   };
 
-  const handleImgDownload = () => {
-    onImgDownload();
+  const handleImgDownload = async () => {
+    // onImgDownload();
+    console.log('download');
+    if (!cardRef.current) return;
+    try {
+      const card = cardRef.current;
+      const canvas = await html2canvas(card);
+      canvas.toBlob((blob) => {
+        if (blob !== null) {
+          saveAs(blob, 'whiskeylikey.png');
+        }
+      });
+    } catch (err) {
+      console.error('Error converting div to image:', err);
+    }
   };
 
   return (
@@ -120,11 +134,7 @@ const Result = () => {
           <div className="div-1">
             <h3>나에게 꼭 맞는 위스키는</h3>
             <MainImgDiv>
-              <img
-                src={resultData?.whiskey_image}
-                className="whiskey"
-                onLoad={handleImgDownload}
-              ></img>
+              <img src={resultData?.whiskey_image} className="whiskey"></img>
             </MainImgDiv>
             <div className="resultTxt">
               <h3 className="name">{resultData?.name}</h3>
@@ -141,11 +151,7 @@ const Result = () => {
               <div className="flavor-pics">
                 {resultData?.flavor_images &&
                   resultData.flavor_images.map((image, index) => (
-                    <img
-                      key={index}
-                      src={image}
-                      onLoad={handleImgDownload}
-                    ></img>
+                    <img key={index} src={image}></img>
                   ))}
               </div>
             </Description>
@@ -159,7 +165,7 @@ const Result = () => {
                 {resultData?.drink_images &&
                   resultData.drink_images.map((image, index) => (
                     <div key={index} className="imgContainer">
-                      <img src={image} onLoad={handleImgDownload}></img>
+                      <img src={image}></img>
                     </div>
                   ))}
               </div>
@@ -168,7 +174,7 @@ const Result = () => {
         </div>
       </div>
       <CtrlDiv className="ctrlDiv">
-        <div onClick={onImgDownload}>
+        <div onClick={handleImgDownload}>
           <img src={save}></img>
         </div>
         {/* <div>
@@ -336,6 +342,7 @@ const Description = styled.div`
     align-items: center;
     img {
       min-width: 0;
+      width: 25%;
       margin: 0 0.5rem;
     }
 
@@ -361,7 +368,7 @@ const Description = styled.div`
     align-items: center;
 
     .imgContainer {
-      // width: 80%;
+      width: 25%;
       height: 70%;
       margin: 0 0.8rem;
 
