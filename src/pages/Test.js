@@ -4,7 +4,7 @@ import './Test.css';
 import logo from './assets/logo.svg';
 import ProgressBar from '../components/ProgressBar';
 import TestItem from '../components/TestItem';
-import likelion from './assets/likelion.svg';
+// import likelion from './assets/likelion.svg';
 import prevBtn from './assets/prev_btn.svg';
 import testData from '../Question.json';
 import { useNavigate } from 'react-router-dom';
@@ -70,7 +70,6 @@ const Test = () => {
         selectedAnswer={answers[currentQuestionIndex]}
         onAnswer={onHandleAnswer}
       />
-      <BottomLogo src={likelion} />
     </Wrapper>
   );
 };
@@ -105,10 +104,10 @@ const TopBar = styled.div`
   }
 `;
 
-const BottomLogo = styled.img`
-  padding-top: 48px;
-  position: absolute;
-  bottom: 28px;
-  width: 176px;
-  height: 18px;
-`;
+// const BottomLogo = styled.img`
+//   padding-top: 48px;
+//   position: absolute;
+//   bottom: 28px;
+//   width: 176px;
+//   height: 18px;
+// `;

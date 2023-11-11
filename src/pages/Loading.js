@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { BottomLogo, Logo } from './Start';
+import { Logo } from './Start';
 import logo from './assets/logo.svg';
 import cup from './assets/cup.svg';
 import bub1 from './assets/Ellipse1.svg';
 import bub2 from './assets/Ellipse2.svg';
 import bub3 from './assets/Ellipse3.svg';
-import likelion from './assets/likelion.svg';
+// import likelion from './assets/likelion.svg';
 
 const Loading = () => {
   const location = useLocation();
@@ -41,7 +41,7 @@ const Loading = () => {
         <img src={bub3}></img>
       </div>
       <img src={cup}></img>
-      <BottomLogo src={likelion} />
+      {/* <BottomLogo src={likelion} /> */}
     </Wrapper>
   );
 };
