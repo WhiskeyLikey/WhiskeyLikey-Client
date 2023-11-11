@@ -19,7 +19,7 @@ const Start = () => {
   useEffect(() => {
     async function fetchUserNum() {
       try {
-        const res = await axios.get('http://127.0.0.1:8000/api/v1/number');
+        const res = await axios.get('http://43.202.80.6:8000/api/v1/number');
         console.log(res.data);
         setUserNum(res.data);
       } catch (err) {
@@ -30,8 +30,8 @@ const Start = () => {
     fetchUserNum();
   }, []);
 
+  const appURI = 'http://3.90.21.108:3000/'; // 배포된 서비스 도메인
   // eslint-disable-next-line no-unused-vars
-  const appURI = ''; // 배포된 서비스 도메인
   const localURI = window.location.href; // localhost:3000
 
   useEffect(() => {
@@ -51,8 +51,8 @@ const Start = () => {
           imageUrl:
             'https://postfiles.pstatic.net/MjAyMzExMDZfMTA3/MDAxNjk5MjU1NTE0MTc3.8RDmFL8Yx_StnoGY5wJ0KExDmq1EkEdc2kUsq1mZXNkg.sEcEyvWGR6JTDrlH_Y1ma_5DovLwRn8OF3EjW8gwTIgg.PNG.mjsonsj/image.png?type=w966',
           link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            webUrl: 'https://developers.kakao.com',
+            mobileWebUrl: appURI,
+            webUrl: appURI,
           },
         },
         buttons: [
@@ -60,8 +60,8 @@ const Start = () => {
             title: '나도 테스트 하러 가기',
             link: {
               // 배포 후 수정
-              mobileWebUrl: localURI,
-              webUrl: localURI,
+              mobileWebUrl: appURI,
+              webUrl: appURI,
             },
           },
         ],

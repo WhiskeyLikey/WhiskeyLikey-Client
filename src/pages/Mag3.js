@@ -58,9 +58,11 @@ function Mag3() {
           </TwoImgContainer>
           <p>
             귀여운 고양이들이 테이블 위를 걸어 다니는 가성비 칵테일바다.🐈
+            <br />
             안주와 술이 모두 전체적으로 저렴하고 가벼운 편이라 2차로
-            안성맞춤이다. 위스키를 단독으로도, 칵테일로도 모두 즐기고 싶다면
-            이곳을 추천한다.
+            안성맞춤이다.
+            <br />
+            위스키를 단독으로도, 칵테일로도 모두 즐기고 싶다면 이곳을 추천한다.
           </p>
         </Section>
         <Section>
@@ -70,8 +72,12 @@ function Mag3() {
           </TwoImgContainer>
           <p>
             종류가 매우 많은 편이어서 술을 고르는 데에만 시간을 엄청나게 쓰게
-            되고는 한다. &lt;위스키라이키&gt;에서 추천받은 위스키를 온 더
-            락으로도 마셔보고, 해당 위스키 기반의 칵테일이나 하이볼도 맛보기를
+            되고는 한다.
+            <br />
+            &lt;위스키라이키&gt;에서 추천받은 위스키를 온 더 락으로도 마셔보고,
+            락으로도 마셔보고,
+            <br /> 해당 위스키 기반의 칵테일이나 하이볼도 맛보기를 추천한다.
+            <br />
             추천한다. 사람이 많은 평일 늦은 저녁이나 주말엔 꼭 먼저 전화로
             자리를 확인하고 방문하는 것이 좋다.
           </p>
@@ -102,9 +108,11 @@ function Mag3() {
           </OneImgContainer>
           <p>
             서울역에서 5분 정도만 걸으면 갈 수 있는 세올. 접근성이 매우 좋다.
+            <br />
             싱글 몰트, 버번, 블렌디드, 하이랜드 등 위스키 라인업이 매우 폭넓다는
-            장점이 있다. 심지어 오픈런 해야만 구매할 수 있는 위스키가 준비돼
-            있다. ( 사장님 배우신 분 😎 )
+            장점이 있다.
+            <br /> 심지어 오픈런 해야만 구매할 수 있는 위스키가 준비돼 있다.
+            (사장님 배우신 분 😎)
           </p>
         </Section>
         <Section>
@@ -113,8 +121,10 @@ function Mag3() {
           </OneImgContainer>
           <p>
             입문자에게 추천하는 가장 큰 이유는 네 가지의 위스키 테이스팅 코스가
-            있기 때문이다. &lt;위스키라이키&gt;에서 추천받은 위스키를 포함해서
-            여러 가지 위스키를 맛보며 취향을 찾아보는 이색 데이트 코스는 어떨까?
+            있기 때문이다.
+            <br /> &lt;위스키라이키&gt;에서 추천받은 위스키를 포함해서 여러 가지
+            여러 가지 위스키를 맛보며
+            <br /> 취향을 찾아보는 이색 데이트 코스는 어떨까?
           </p>
         </Section>
         <Section>
@@ -122,8 +132,9 @@ function Mag3() {
             <img src={bar8}></img>
           </OneImgContainer>
           <p>
-            인테리어도 고급 지고 예뻐서 누구나 호불호 없이 좋아할 만 하다. 미리
-            네이버 예약도 가능하니 예약하고 여유 있게 방문해 보자.
+            인테리어도 고급 지고 예뻐서 누구나 호불호 없이 좋아할 만 하다.
+            <br />
+            미리 네이버 예약도 가능하니 예약하고 여유 있게 방문해 보자.
           </p>
         </Section>
       </Contents>
@@ -153,9 +164,9 @@ function Mag3() {
             <img src={bar10} className="verImg"></img>
           </OneImgContainer>
           <p>
-            이곳을 추천하는 이유는 바로 ‘추천 칵테일/위스키’이다. 바텐더에게
-            본인의 취향, 또는 오늘따라 땡기는 분위기 맛 향을 말씀드리면 뚝딱
-            만들어주신다.
+            이곳을 추천하는 이유는 바로 ‘추천 칵테일/위스키’이다.
+            <br /> 바텐더에게 본인의 취향, 또는 오늘따라 땡기는 분위기 맛 향을
+            말씀드리면 뚝딱 만들어주신다.
           </p>
         </Section>
         <Section>
@@ -164,6 +175,7 @@ function Mag3() {
           </OneImgContainer>
           <p>
             보통 입문자들에게는 추천해달라는 한마디가 어렵게 느껴지곤 한다.
+            <br />
             하지만 이곳에서는 부담 없이 어떤 것이든 요청할 수 있는 분위기가
             형성돼있어 좋다.
           </p>
@@ -173,10 +185,12 @@ function Mag3() {
             <img src={bar12}></img>
           </OneImgContainer>
           <p>
-            &lt;위스키라이키&gt;에서 추천받은 위스키 한 잔, 비슷한 계열의
-            위스키를 추천받아 또 한 잔 하다 보면 어느새 위른이가 된 나를 발견할
-            수 있을 것이다.✌️ 이곳 또한 네이버 예약을 받고 있으니 미리 예약해
-            센스쟁이가 되어보자.
+            &lt;위스키라이키&gt;에서 추천받은 위스키 한 잔,
+            <br />
+            비슷한 계열의 위스키를 추천받아 또 한 잔 하다 보면 어느새 위른이가
+            된 나를 발견할 수 있을 것이다.✌️
+            <br /> 이곳 또한 네이버 예약을 받고 있으니 미리 예약해 센스쟁이가
+            되어보자.
           </p>
         </Section>
       </Contents>
@@ -202,7 +216,13 @@ const Contents = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  margin-bottom: 60px;
+  h3 {
+    margin-bottom: 32px;
+  }
+  img {
+    padding-bottom: 12px;
+  }
   @media screen and (max-width: 500px) {
     img {
       width: 300px;
@@ -244,19 +264,28 @@ const MapDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  &:hover {
+    transition: transform 0.15s linear;
+    transform-origin: 50% 50%;
+    transform: scale(1.03);
+    box-shadow:
+      0 4px 4px rgba(0, 0, 0, 0.1),
+      0 4px 4px rgba(0, 0, 0, 0.1);
+  }
   .pinContainer {
     width: 20%;
     height: 100%;
-    box-sizing: border-box !important;
+    box-sizing: border-box;
     border-right: 1px solid #ddd;
     display: flex;
-    flex-direction: column;
-    justify-content: center !important;
+    flex-direction: row;
+    align-items: center;
     img {
-      height: 40%;
+      height: 36px;
+      justify-content: center;
+      padding-top: 10px;
     }
   }
-
   .description {
     padding: 1rem;
     box-sizing: border-box;
