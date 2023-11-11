@@ -5,7 +5,7 @@ import logo from './assets/logo.svg';
 import drops from './assets/drops.svg';
 import titlegraphic from './assets/Graphic_Elements.svg';
 import save from './assets/save.svg';
-import intersect from './assets/Intersect.svg';
+// import intersect from './assets/Intersect.svg';
 import kakao from './assets/kakaotalk.svg';
 import mag1 from './assets/mag1.png';
 import mag2 from './assets/mag2.png';
@@ -34,17 +34,17 @@ const Result = () => {
       .then((blob) => saveAs(blob, 'WhiskeyLikeyForYou.png'));
   };
 
-  // 링크 복사
-  const baseUrl = ''; //서버url
-  const handleCopyClipBoard = async (text) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      alert('링크를 복사했습니다');
-      console.log(text);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // // 링크 복사
+  // const baseUrl = ''; //서버url
+  // const handleCopyClipBoard = async (text) => {
+  //   try {
+  //     await navigator.clipboard.writeText(text);
+  //     alert('링크를 복사했습니다');
+  //     console.log(text);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
   // 카카오톡 공유
   const appURI = 'http://3.90.21.108:3000/'; // 배포된 서비스 도메인
@@ -158,9 +158,8 @@ const Result = () => {
       <CtrlDiv className="ctrlDiv">
         <div onClick={onImgDownload}>
           <img src={save}></img>
-          <p>이미지로 저장하기</p>
         </div>
-        <div>
+        {/* <div>
           <img
             src={intersect}
             onClick={() =>
@@ -172,10 +171,9 @@ const Result = () => {
             <br />
             복사하기
           </p>
-        </div>
+        </div> */}
         <div>
           <img src={kakao} onClick={shareKakao}></img>
-          <p>카카오톡 친구에게 공유하기</p>
         </div>
       </CtrlDiv>
       <div className="magDiv">
@@ -370,18 +368,25 @@ const CtrlDiv = styled.div`
     width: 60px;
     text-align: center;
     margin: 0 1.5rem;
-
     img {
       width: 100%;
     }
-
     img:hover {
       cursor: pointer;
     }
   }
-
   p {
     font-size: 0.8rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    div {
+      width: 44px;
+    }
+    img {
+      width: 44px;
+      height: 44px;
+    }
   }
 `;
 
