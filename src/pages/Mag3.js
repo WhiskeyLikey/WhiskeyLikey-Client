@@ -17,7 +17,7 @@ import bar9 from './assets/bar9.png';
 import bar10 from './assets/bar10.png';
 import bar11 from './assets/bar11.png';
 import bar12 from './assets/bar12.png';
-import { Wrapper, Section, TwoImgContainer } from './Mag1';
+import { Wrapper, Section } from './Mag1';
 
 function Mag3() {
   const navigator = useNavigate();
@@ -237,6 +237,24 @@ const Intro = styled.div`
   align-items: center;
   img {
     width: 600px;
+  }
+`;
+
+const TwoImgContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 300px;
+  justify-content: space-between;
+  // border: 1px solid red;
+
+  img {
+    width: 48%;
+    border-radius: 20px;
+  }
+
+  @media all and (min-width: 501px) {
+    width: 640px;
   }
 `;
 

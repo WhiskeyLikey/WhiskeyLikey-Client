@@ -156,20 +156,41 @@ const TwoImgContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 640px;
+  width: 300px;
   justify-content: space-between;
   img {
-    width: 300px;
+    width: 48%;
     border-radius: 20px;
   }
-
-  @media screen and (max-width: 500) {
-    width: 300px !important;
-    img {
-      width: 140px !important;
-    }
+  @media all and (min-width: 501px) {
+    width: 640px;
   }
+
+  // @media screen and (max-width: 500) {
+  //   width: 300px !important;
+  //   img {
+  //     width: 40%; !important;
+  //   }
+  // }
 `;
+// const TwoImgContainer = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   width: 640px;
+//   justify-content: space-between;
+//   img {
+//     width: 300px;
+//     border-radius: 20px;
+//   }
+
+//   @media screen and (max-width: 500) {
+//     width: 300px !important;
+//     img {
+//       width: 140px !important;
+//     }
+//   }
+// `;
 
 const OneImgContainer = styled.div`
   img {
