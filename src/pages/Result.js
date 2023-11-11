@@ -27,16 +27,12 @@ const Result = () => {
 
   // 이미지 저장
   const cardRef = useRef();
-
   const onImgDownload = () => {
     const card = cardRef.current;
     domtoimage
       .toBlob(card)
       .then((blob) => saveAs(blob, 'WhiskeyLikeyForYou.png'));
   };
-  setTimeout(() => {
-    onImgDownload();
-  }, 0);
 
   // // 링크 복사
   // const baseUrl = ''; //서버url
@@ -108,6 +104,10 @@ const Result = () => {
     }
   };
 
+  const handleImgDownload = () => {
+    onImgDownload();
+  };
+
   return (
     <Wrapper className="wrap">
       <div
@@ -120,7 +120,11 @@ const Result = () => {
           <div className="div-1">
             <h3>나에게 꼭 맞는 위스키는</h3>
             <MainImgDiv>
-              <img src={resultData?.whiskey_image} className="whiskey"></img>
+              <img
+                src={resultData?.whiskey_image}
+                className="whiskey"
+                onLoad={handleImgDownload}
+              ></img>
             </MainImgDiv>
             <div className="resultTxt">
               <h3 className="name">{resultData?.name}</h3>
@@ -137,7 +141,11 @@ const Result = () => {
               <div className="flavor-pics">
                 {resultData?.flavor_images &&
                   resultData.flavor_images.map((image, index) => (
-                    <img key={index} src={image}></img>
+                    <img
+                      key={index}
+                      src={image}
+                      onLoad={handleImgDownload}
+                    ></img>
                   ))}
               </div>
             </Description>
@@ -151,7 +159,7 @@ const Result = () => {
                 {resultData?.drink_images &&
                   resultData.drink_images.map((image, index) => (
                     <div key={index} className="imgContainer">
-                      <img src={image}></img>
+                      <img src={image} onLoad={handleImgDownload}></img>
                     </div>
                   ))}
               </div>
@@ -244,7 +252,7 @@ const Wrapper = styled.div`
 
     .div-2 {
       width: 400px;
-      padding: 1rem;
+      padding: 0 1rem 1rem 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -320,18 +328,21 @@ const Description = styled.div`
     height: 13rem;
     padding: 0.5rem;
     box-sizing: border-box;
-
     background: rgba(225, 186, 101, 0.7);
     border-radius: 20px;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
     img {
       min-width: 0;
       margin: 0 0.5rem;
+    }
+
+    @media screen and (max-width: 500px) {
+      img {
+        margin: 0 1rem;
+      }
     }
   }
 
@@ -351,13 +362,18 @@ const Description = styled.div`
 
     .imgContainer {
       // width: 80%;
-      height: 80%;
-      margin: 0 0.5rem;
+      height: 70%;
+      margin: 0 0.8rem;
 
       img {
         object-fit: contain;
         width: 100%;
         height: 100%;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      img {
+        margin: 0 1rem;
       }
     }
   }
