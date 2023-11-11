@@ -27,12 +27,16 @@ const Result = () => {
 
   // 이미지 저장
   const cardRef = useRef();
+
   const onImgDownload = () => {
     const card = cardRef.current;
     domtoimage
       .toBlob(card)
       .then((blob) => saveAs(blob, 'WhiskeyLikeyForYou.png'));
   };
+  setTimeout(() => {
+    onImgDownload();
+  }, 0);
 
   // // 링크 복사
   // const baseUrl = ''; //서버url
