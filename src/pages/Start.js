@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import logo from './assets/logo.svg';
 import mainImg from './assets/start_img.svg';
-import likelion from './assets/likelion.svg';
+// import likelion from './assets/likelion.svg';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -86,13 +86,13 @@ const Start = () => {
         <button onClick={navigateToTest}>테스트 시작하기</button>
         <button onClick={shareKakao}>테스트 공유하기</button>
       </ButtonContainer>
-      <BottomLogo src={likelion} />
+      {/* <BottomLogo src={likelion} /> */}
     </Wrapper>
   );
 };
 
 export default Start;
-export { Logo, BottomLogo };
+export { Logo };
 
 const Wrapper = styled.div`
   display: flex;
@@ -158,13 +158,13 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const BottomLogo = styled.img`
-  padding-top: 48px;
-  width: 176px;
-  height: 18px;
-  position: absolute;
-  bottom: 28px;
-  @media screen and (max-width: 500px) {
-    margin-top: 60px;
-  }
-`;
+// const BottomLogo = styled.img`
+//   padding-top: 48px;
+//   width: 176px;
+//   height: 18px;
+//   position: absolute;
+//   bottom: 28px;
+//   @media screen and (max-width: 500px) {
+//     margin-top: 60px;
+//   }
+// `;
