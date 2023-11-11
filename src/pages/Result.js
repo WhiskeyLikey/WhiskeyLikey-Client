@@ -83,8 +83,8 @@ const Result = () => {
           imageUrl:
             'https://postfiles.pstatic.net/MjAyMzExMDZfMTA3/MDAxNjk5MjU1NTE0MTc3.8RDmFL8Yx_StnoGY5wJ0KExDmq1EkEdc2kUsq1mZXNkg.sEcEyvWGR6JTDrlH_Y1ma_5DovLwRn8OF3EjW8gwTIgg.PNG.mjsonsj/image.png?type=w966',
           link: {
-            mobileWebUrl: appURI,
-            webUrl: appURI,
+            mobileWebUrl: `${appURI}/result`,
+            webUrl: `${appURI}/result`,
           },
         },
         buttons: [
@@ -92,8 +92,8 @@ const Result = () => {
             title: '나도 테스트 하러 가기',
             link: {
               // 배포 후 수정
-              mobileWebUrl: appURI,
-              webUrl: appURI,
+              mobileWebUrl: `${appURI}/result`,
+              webUrl: `${appURI}/result`,
             },
           },
         ],
